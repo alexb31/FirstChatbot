@@ -25,6 +25,13 @@ var bot = new builder.UniversalBot(connector, function(session){
     session.send(`haha, t'es en train d'écrire`);    
     });
 
+    if(session.message.text === "Do heavy work" || session.message.text === "do heavy work") {
+        session.sendTyping();
+        setTimeout(function() {
+            session.send("Heavy Work Done, it was exhausting :p");
+        }, 3000);
+    }
+
 });
 
     // Welcome message AND message when ADD USER
